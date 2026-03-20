@@ -9,6 +9,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(title: Text("DICEE"), backgroundColor: Colors.red),
+        body: Center(
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Image.asset('images/dice1.png'),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Image.asset('images/dice1.png'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
